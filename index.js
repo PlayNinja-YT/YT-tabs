@@ -5,10 +5,10 @@ const videoURL = process.env.YOUTUBE_VIDEO_URL;
 console.log("🚀 ~ videoURL:", videoURL);
 
 async function openIncognitoTabs() {
-  for (let i = 0; i < 10000; i++) {
+  for (let i = 0; i < 1; i++) {
     // Open 5 incognito browsers
     const browsers = [];
-    for (let j = 0; j < 5; j++) {
+    for (let j = 0; j < 1; j++) {
       try {
         const browser = await puppeteer.launch({ headless: true }); // Launch the browser in non-headless mode for visibility
         browsers.push(browser);
@@ -28,7 +28,7 @@ async function openIncognitoTabs() {
           console.log("Play button not found on this page");
         }
         console.log(`video ${i + 1}.${j + 1} Playing....`);
-        if (j === 4) {
+        if (j === 0) {
           const randomTimeout =
             Math.floor(Math.random() * (30000 - 10000 + 1)) + 10000;
           console.log(`Waiting for ${randomTimeout / 1000} seconds...`);
