@@ -44,7 +44,7 @@ async function openIncognitoTabs() {
           );
         }
       } catch (error) {
-        console.log(`openIncognitoTabs ${i + 1}.${j + 1} ~ error`);
+        console.log(`openIncognitoTabs ${i + 1}.${j + 1} ~ error`, error);
       }
     }
   }
